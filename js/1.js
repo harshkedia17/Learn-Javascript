@@ -39,3 +39,5 @@ let data = `hi my name is ${name}`
 let data = true;
 let data = undefined;
 let data = null;
+
+const ans = {a:'a', b:'b', c:'c'}

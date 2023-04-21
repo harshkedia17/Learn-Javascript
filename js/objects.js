@@ -5,7 +5,7 @@ const person = {
 
 }
 console.log(person);
-console.log(typeof person);
+console.log(typeof person); // object
 // access the properties of the object using dot notation
 
 console.log(person.f_name);
@@ -32,7 +32,7 @@ const obj2 = {
     key3 : "value3",    
     key4 : "value4"
 }
-const newObj = {...obj1, ...obj2}
+const newObj = {...obj1, ...obj2,key5:"value5"}
 console.log(newObj);
  const spread = {..."abc"} // {"0":"a", "1":"b", "2":"c}
 
@@ -45,6 +45,6 @@ const band = {
 }
 
 const {bandname, genre} = band;
-console.log(bandname, genre);
+console.log(bandname, genre); // Linkin Park Rock
 // ! we can also change the name of the variables while destructuring
 const {bandname: name, genre: type} = band;

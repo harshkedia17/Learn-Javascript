@@ -34,7 +34,59 @@ let [c, ,d,...e] = myArr; // ...e is the rest operator and stores all the remain
 const arr1 = [1,2,3]
 const arr2 = [4,5,6]
 
-const newArr = [...arr1] // sprfeads the elements of arr1 into newArr
+var newArr = [...arr1] // sprfeads the elements of arr1 into newArr
 newArr = [...arr1, ...arr2,89,45] // spreads the elements of arr1 and arr2 into newArr
 
-const arr = [..."abc"] // ["a", "b", "c"]
+// const arr = [..."abc"] // ["a", "b", "c"]
+
+
+
+// * Array methods
+/**
+ * ? map
+ * ? filter
+ * ? reduce
+ * ? forEach
+ * ? sort
+ * ? find
+ * ? every
+ * ? some
+ * ? fill
+ * ? splice
+ */
+
+var numbers = [4,2,5,8]
+// function myFunc(num,idx){
+//     console.log(num,idx)
+// }
+
+// ! applies a fucntion to each element of the array and returns a new array
+numbers = numbers.map(num=>{
+    return num*num
+})
+// ! applies a function to each element of the array and returns a new array with only the elements that satisfy the condition
+numbers = numbers.filter(num=>{
+    return num%2==0
+})
+// ! applies a function to each element of the array and returns a single value
+var ans = numbers.reduce((num,total)=>{
+    return num+total
+},0)
+console.log(ans)
+// calls the function for each element of the array
+numbers.forEach((num,idx)=>{
+    console.log(num,idx)
+})
+
+// ! find
+// returns the first element that satisfies the condition
+var ans = numbers.find(num=>{
+    return num%2==0
+})
+
+// ! fill
+
+var arr = new Array(10).fill(0)
+
+const arr6  = [1,2,3,4,5,6,7,8,9,10]
+arr6.fill(0,2,5) // fills the array with 0 from index 2 to 5(inclusive)
